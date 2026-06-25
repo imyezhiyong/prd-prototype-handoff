@@ -1,10 +1,18 @@
 # Modao Prototype Standard
 
-Use this reference when creating, reviewing, or updating the Modao clickable prototype spec.
+Use this reference when creating, reviewing, or updating the Modao clickable prototype.
 
 ## Prototype Role
 
 The Modao prototype is the only human-edited source of truth. It must contain both visual UI and structured requirements so reviewers and AI coding tools do not need to jump between separate PRD files.
+
+## Editable Source Requirement
+
+The primary deliverable must be an editable Modao project/file created or updated directly in Modao through the `computer-use` plugin, unless a reliable Modao MCP/API/import path is available and explicitly chosen.
+
+Do not deliver a flattened screenshot, Markdown document, HTML page, SVG, or arbitrary JSON as the Modao source. Those may be supplementary references only.
+
+If Modao cannot be operated, stop and ask for the specific user action listed in `modao-computer-use.md`.
 
 ## Required Page Layout
 
