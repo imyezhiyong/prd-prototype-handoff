@@ -4,7 +4,8 @@ A Codex skill for turning product requirements, screenshots, style references, a
 
 The workflow keeps delivery simple:
 
-- **Modao clickable prototype** is the only human-edited source of truth.
+- **Modao editable prototype source** is created or updated by Codex operating Modao through the `computer-use` plugin when source design is requested.
+- **Modao clickable prototype** remains the only human-edited source of truth.
 - **`handoff.md`** is generated from prototype annotation panels for development and testing.
 - Requirements, fields, actions, rules, states, and acceptance criteria use stable IDs so mainstream AI coding tools can implement with minimal clarification.
 
@@ -30,22 +31,26 @@ Restart Codex after installation if the skill does not appear immediately.
 ## Usage
 
 ```text
-Use $prd-prototype-handoff to turn this requirement into a Modao prototype plan and handoff.md.
+Use $prd-prototype-handoff to clarify this requirement, operate Modao via computer-use to create the editable prototype, then generate handoff.md.
+```
+
+```text
+Use $prd-prototype-handoff to update my existing Modao prototype based on these iteration requirements and regenerate handoff.md.
 ```
 
 ```text
 Use $prd-prototype-handoff to check whether this Modao prototype is AI-ready for development.
 ```
 
-```text
-Use $prd-prototype-handoff to regenerate handoff.md from my updated prototype annotation panels.
-```
-
 ## Deliverables
 
 The skill defaults to two deliverables only:
 
-1. A Modao clickable prototype with structured annotation panels.
+1. An editable Modao prototype source with clickable interactions and structured annotation panels.
 2. A consolidated generated `handoff.md` for development and testing.
 
 It intentionally avoids maintaining separate PRD, development handoff, testing handoff, and change-log files unless the project complexity requires them.
+
+## Notes
+
+When Codex needs to create or edit the actual Modao source, Modao must be reachable and logged in. If login, CAPTCHA, workspace permission, save, or share actions are blocked, Codex should stop and ask the user to complete the blocked step instead of substituting Markdown, HTML, or screenshots for the editable source.
