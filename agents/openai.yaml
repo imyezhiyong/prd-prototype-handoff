@@ -1,0 +1,4 @@
+interface:
+  display_name: "PRD Prototype Handoff"
+  short_description: "Turn requirements into AI-ready prototype handoffs."
+  default_prompt: "Use $prd-prototype-handoff to turn this requirement into a Modao prototype plan and handoff.md."
